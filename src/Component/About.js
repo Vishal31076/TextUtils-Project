@@ -10,24 +10,6 @@ export default function About() {
   const [btnText, setBtnText] = useState("Enable Dark Mode");
   
 
-  const toogleStyle = () =>{
-    if(myStyle.color === 'black'){
-        setMyStyle({
-            color: 'white',
-            backgroundColor: 'black',
-            border: "1px solid cyan"
-        })
-        setBtnText("Enable Light Mode")
-    }
-    else{
-        setMyStyle({
-            color: 'black',
-            backgroundColor: 'white'
-        })
-        setBtnText("Enable Dark Mode")
-    }
-  }
-
 
   return (
     <div className="container" style={myStyle}>
@@ -129,11 +111,6 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="container my-3">
-        <button onClick={toogleStyle} type="button" className="btn btn-warning">
-          {btnText}
-        </button>
       </div>
     </div>
   );
